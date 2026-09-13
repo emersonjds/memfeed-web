@@ -3,12 +3,14 @@ import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/shared/ui/
 
 type ConceitosEsquecidosProps = {
   readonly lessons: readonly PublishedLesson[];
+  readonly limit?: number;
 };
 
 const headerCellClasses = 'text-xs font-semibold uppercase tracking-wide text-ink-muted';
 
-export const ConceitosEsquecidos = ({ lessons }: ConceitosEsquecidosProps) => {
-  const ranked = rankForgottenConcepts(lessons);
+export const ConceitosEsquecidos = ({ lessons, limit }: ConceitosEsquecidosProps) => {
+  const allRanked = rankForgottenConcepts(lessons);
+  const ranked = limit ? allRanked.slice(0, limit) : allRanked;
 
   return (
     <div className="rounded-2xl border border-border-soft bg-surface p-5 sm:p-6">

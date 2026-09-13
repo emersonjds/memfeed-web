@@ -36,7 +36,7 @@ export const HeroPhones = () => {
           {...entrance}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <PhoneFrame src="/app/cadernos.png" alt="Tela de cadernos do Memfeed, com a retenção de cada matéria" />
+          <PhoneFrame src="/app/cadernos.png" alt="Tela de matérias do Memfeed, com a retenção de cada assunto" />
         </motion.div>
 
         <motion.div

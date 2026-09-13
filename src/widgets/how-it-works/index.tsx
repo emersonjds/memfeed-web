@@ -5,10 +5,10 @@ import { Reveal } from '@/shared/ui/reveal';
 const steps = [
   {
     number: '01',
-    title: 'Fotografe a página que você estudou',
-    body: 'Aponte para o caderno, o slide ou o livro. A câmera só liga nessa tela e a imagem vira pergunta — nada é publicado, nada vai para um feed de outra pessoa.',
-    screenshot: '/app/escanear.png',
-    alt: 'Tela de escanear do Memfeed, com a moldura da câmera e o botão de liberar a câmera',
+    title: 'O professor publica, ou você escolhe o assunto',
+    body: 'Prof. Marcos termina a aula e publica o tema para a turma. Ou você mesmo digita o que precisa revisar antes da prova. As duas origens entram na mesma fila de revisão.',
+    screenshot: '/app/perfil.png',
+    alt: 'Tela de perfil do Memfeed com o índice de retenção do aluno',
   },
   {
     number: '02',
@@ -22,7 +22,7 @@ const steps = [
     title: 'Cada card volta no dia em que ia escapar',
     body: 'Você avalia o quanto lembrou e o FSRS calcula o próximo encontro. A meta do dia termina, o app agradece e sai da frente.',
     screenshot: '/app/cadernos.png',
-    alt: 'Tela de cadernos do Memfeed com a retenção de cada matéria e a próxima revisão',
+    alt: 'Tela de matérias do Memfeed com a retenção de cada assunto e a próxima revisão',
   },
 ] as const;
 

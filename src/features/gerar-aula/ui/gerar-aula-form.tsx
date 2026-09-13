@@ -3,15 +3,23 @@
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { generateLesson, publishLesson } from '@/entities/aula/api';
-import type { GeneratedLesson } from '@/entities/aula/model';
+import type { GeneratedLesson, TeacherClass } from '@/entities/aula/model';
 import { Button } from '@/shared/ui/button';
-import { Field, NumberInput, TextInput } from '@/shared/ui/field';
+import { Field, Select, TextInput } from '@/shared/ui/field';
 
 type Step = 'formulario' | 'revisao' | 'publicada';
 
-const DEFAULT_QUESTION_COUNT = 10;
+const DEFAULT_QUESTION_COUNT = 15;
 
-export const GerarAulaForm = () => {
+// 10 · 15 · 20: o que sustenta retenção é a recuperação espaçada, não o volume de uma sessão.
+const QUESTION_COUNT_OPTIONS = [10, 15, 20] as const;
+
+type GerarAulaFormProps = {
+  readonly subjects: readonly string[];
+  readonly classes: readonly TeacherClass[];
+};
+
+export const GerarAulaForm = ({ subjects, classes }: GerarAulaFormProps) => {
   const [step, setStep] = useState<Step>('formulario');
   const [isBusy, setIsBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -26,9 +34,11 @@ export const GerarAulaForm = () => {
     setError(null);
 
     try {
+      const classId = String(form.get('classId') ?? '');
       const generated = await generateLesson({
         subject: String(form.get('subject') ?? ''),
         topic: String(form.get('topic') ?? ''),
+        classId: classId.length > 0 ? classId : undefined,
         questionCount: Number(form.get('questionCount') ?? DEFAULT_QUESTION_COUNT),
       });
       setLesson(generated);
@@ -155,8 +165,30 @@ export const GerarAulaForm = () => {
       className="flex flex-col gap-4 rounded-2xl border border-border-soft bg-surface p-5 sm:p-6"
     >
       <Field label="Matéria" htmlFor="subject">
-        <TextInput id="subject" name="subject" required defaultValue="Biologia" />
+        {subjects.length > 0 ? (
+          <Select id="subject" name="subject" required defaultValue={subjects[0]}>
+            {subjects.map((subject) => (
+              <option key={subject} value={subject}>
+                {subject}
+              </option>
+            ))}
+          </Select>
+        ) : (
+          <TextInput id="subject" name="subject" required placeholder="Biologia" />
+        )}
       </Field>
+
+      {classes.length > 0 && (
+        <Field label="Turma" htmlFor="classId">
+          <Select id="classId" name="classId" required defaultValue={classes[0]?.id}>
+            {classes.map((schoolClass) => (
+              <option key={schoolClass.id} value={schoolClass.id}>
+                {schoolClass.name} · {schoolClass.grade}
+              </option>
+            ))}
+          </Select>
+        </Field>
+      )}
 
       <Field
         label="Assunto da aula"
@@ -171,15 +203,18 @@ export const GerarAulaForm = () => {
         />
       </Field>
 
-      <Field label="Quantas questões" htmlFor="questionCount">
-        <NumberInput
-          id="questionCount"
-          name="questionCount"
-          min={5}
-          max={30}
-          defaultValue={DEFAULT_QUESTION_COUNT}
-          required
-        />
+      <Field
+        label="Quantas questões"
+        htmlFor="questionCount"
+        hint="A retenção vem da recuperação espaçada, não do volume de uma sessão só."
+      >
+        <Select id="questionCount" name="questionCount" required defaultValue={DEFAULT_QUESTION_COUNT}>
+          {QUESTION_COUNT_OPTIONS.map((count) => (
+            <option key={count} value={count}>
+              {count} questões
+            </option>
+          ))}
+        </Select>
       </Field>
 
       {error && <p className="text-sm font-semibold text-danger">{error}</p>}

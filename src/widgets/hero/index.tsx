@@ -40,20 +40,21 @@ export const Hero = () => (
         </h1>
 
         <p className="max-w-xl text-lg leading-relaxed text-ink-muted text-pretty sm:text-xl">
-          Fotografe a página do caderno. O Memfeed transforma o que você escreveu em perguntas de
-          quinze segundos e devolve cada uma no dia em que a sua memória ia falhar. Sem scroll
-          infinito: a sessão acaba de propósito.
+          O professor publica o que deu em aula. Você escolhe o que precisa revisar. O Memfeed
+          transforma em perguntas de quinze segundos e devolve cada uma no dia em que a sua
+          memória ia falhar. Sem scroll infinito: a sessão acaba de propósito.
         </p>
 
         <QrCodePanel size="large" className="w-full max-w-xl" />
 
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-ink-muted">
           <li className="flex items-center gap-2">
-            <CheckMark />A câmera só liga na tela de escanear
+            <CheckMark />
+            Sem ranking entre alunos
           </li>
           <li className="flex items-center gap-2">
             <CheckMark />
-            Nada do seu caderno é publicado
+            Você contra o seu esquecimento, não contra a turma
           </li>
         </ul>
       </div>

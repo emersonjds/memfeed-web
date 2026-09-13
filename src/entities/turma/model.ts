@@ -8,12 +8,16 @@ export type PublishedLesson = {
   readonly id: string;
   readonly topic: string;
   readonly publishedAt: string;
+  readonly className: string;
+  readonly school: string;
+  readonly studentCount: number;
   readonly answeredBy: number;
   readonly concepts: readonly ConceptResult[];
 };
 
 export type ClassReport = {
   readonly className: string;
+  readonly school: string;
   readonly subject: string;
   readonly studentCount: number;
   readonly participation: number;

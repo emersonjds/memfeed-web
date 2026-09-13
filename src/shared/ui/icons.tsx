@@ -43,6 +43,19 @@ export const MenuIcon = ({ className }: IconProps) => (
   </svg>
 );
 
+export const ChartIcon = ({ className }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+    <path
+      d="M5 19V10M12 19V5M19 19v-6"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M3 19h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>
+);
+
 export const CloseIcon = ({ className }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
     <path
