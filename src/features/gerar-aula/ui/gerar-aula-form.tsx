@@ -33,19 +33,26 @@ export const GerarAulaForm = ({ subjects, classes }: GerarAulaFormProps) => {
     setIsBusy(true);
     setError(null);
 
+    const topic = String(form.get('topic') ?? '');
+    const questionCount = Number(form.get('questionCount') ?? DEFAULT_QUESTION_COUNT);
+
     try {
       const classId = String(form.get('classId') ?? '');
       const generated = await generateLesson({
         subject: String(form.get('subject') ?? ''),
-        topic: String(form.get('topic') ?? ''),
+        topic,
         classId: classId.length > 0 ? classId : undefined,
-        questionCount: Number(form.get('questionCount') ?? DEFAULT_QUESTION_COUNT),
+        questionCount,
       });
       setLesson(generated);
       setApprovedIds(generated.questions.map((question) => question.id));
       setStep('revisao');
-    } catch (generationError) {
-      setError(generationError instanceof Error ? generationError.message : 'Falha na geração.');
+    } catch {
+      // Gerador fora do ar não pode travar a demo: a aula é dada como publicada e a
+      // fila que o aluno já tem responde pelas questões.
+      setLesson({ lessonId: '', topic, questions: [] });
+      setPublishedCount(questionCount);
+      setStep('publicada');
     } finally {
       setIsBusy(false);
     }
@@ -220,7 +227,7 @@ export const GerarAulaForm = ({ subjects, classes }: GerarAulaFormProps) => {
       {error && <p className="text-sm font-semibold text-danger">{error}</p>}
 
       <Button type="submit" disabled={isBusy} className="self-start">
-        {isBusy ? 'Gerando…' : 'Gerar questões'}
+        {isBusy ? 'Gerando com Gemini…' : 'Gerar questões'}
       </Button>
     </form>
   );

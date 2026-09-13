@@ -61,7 +61,7 @@ export const GerarReforcoButton = ({
         title={hasConcepts ? undefined : 'Sem conceitos fracos registrados para este aluno'}
         className="min-h-11 px-4 text-sm"
       >
-        {state.status === 'loading' ? 'Gerando…' : 'Gerar reforço'}
+        {state.status === 'loading' ? 'Gerando com Gemini…' : 'Gerar reforço'}
       </Button>
       {state.status === 'error' && (
         <p className="text-xs font-semibold text-danger">{state.message}</p>
