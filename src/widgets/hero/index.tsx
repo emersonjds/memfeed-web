@@ -1,5 +1,4 @@
 import { QrCodePanel } from '@/features/expo-launch/ui/qr-code-panel';
-import { Badge } from '@/shared/ui/badge';
 import { HeroPhones } from './hero-phones';
 
 export const Hero = () => (
@@ -14,8 +13,6 @@ export const Hero = () => (
 
     <div className="mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
       <div className="flex flex-col items-start gap-6">
-        <Badge tone="accent">HACKTUDO 2026 · protótipo funcionando hoje</Badge>
-
         <h1 className="text-[2.6rem] leading-[1.02] font-extrabold tracking-tight text-balance sm:text-6xl lg:text-[4.1rem]">
           O que você estudou hoje volta{' '}
           <span className="relative whitespace-nowrap text-primary-deep">
