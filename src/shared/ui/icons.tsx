@@ -66,3 +66,15 @@ export const CloseIcon = ({ className }: IconProps) => (
     />
   </svg>
 );
+
+export const ExitIcon = ({ className }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+    <path
+      d="M14 5h4a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-4M4 12h11m0 0-3.5-3.5M15 12l-3.5 3.5"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

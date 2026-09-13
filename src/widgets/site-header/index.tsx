@@ -26,11 +26,9 @@ export const SiteHeader = () => (
       </nav>
 
       <div className="flex shrink-0 items-center gap-2">
-        <div className="hidden sm:block">
-          <LinkButton href="/painel" size="medium" variant="neutral">
-            Professor
-          </LinkButton>
-        </div>
+        <LinkButton href="/painel" size="medium" variant="neutral">
+          Professor
+        </LinkButton>
         <LinkButton
           href={siteConfig.appUrl}
           size="medium"
