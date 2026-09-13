@@ -25,19 +25,19 @@ export const Features = () => (
       <Reveal className="lg:col-span-4">
         <article className="flex h-full flex-col gap-6 overflow-hidden rounded-3xl bg-surface-soft p-7 ring-1 ring-border-soft sm:flex-row sm:items-center sm:p-9">
           <div className="flex-1">
-            <Badge>Ranking semanal</Badge>
+            <Badge>Evolução</Badge>
             <h3 className="mt-4 text-2xl font-extrabold tracking-tight text-balance">
-              Uma liga que premia quem lembra, não quem fica mais tempo no app
+              Você contra o seu próprio esquecimento, nunca contra a turma
             </h3>
             <p className="mt-3 text-base leading-relaxed text-ink-muted text-pretty">
-              O XP vem de card recuperado, não de minuto queimado. Dá para desafiar um amigo no mesmo
-              caderno e ver quem reativa o conteúdo mais rápido.
+              Retenção em D+7 comparada com o mês passado, matéria por matéria, e sequência com
+              folgas: um dia de descanso não zera o progresso.
             </p>
           </div>
           <div className="relative mx-auto aspect-[9/12] w-[190px] shrink-0 overflow-hidden rounded-2xl ring-1 ring-border-soft sm:w-[210px]">
             <Image
-              src="/app/ranking.png"
-              alt="Tela de ranking semanal do Memfeed com a classificação dos alunos"
+              src="/app/perfil.png"
+              alt="Tela de perfil do Memfeed mostrando a retenção do aluno e a sequência de dias de estudo"
               fill
               sizes="210px"
               className="object-cover object-top"
@@ -63,7 +63,7 @@ export const Features = () => (
 
       <Reveal delay={0.12} className="lg:col-span-3">
         <article className="flex h-full flex-col gap-4 rounded-3xl bg-surface-soft p-7 ring-1 ring-border-soft sm:p-9">
-          <Badge tone="neutral">Seus cadernos</Badge>
+          <Badge tone="neutral">Suas matérias</Badge>
           <h3 className="text-2xl font-extrabold tracking-tight text-balance">
             Cada matéria com a própria saúde de memória
           </h3>

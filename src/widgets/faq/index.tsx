@@ -8,9 +8,9 @@ const questions = [
       'Não. O código na tela abre o Memfeed dentro do Expo Go, o aplicativo gratuito que a Expo publica nas duas lojas. Se você já tiver o Expo Go, a leitura do código é o único passo.',
   },
   {
-    question: 'A foto do meu caderno vai para algum lugar?',
+    question: 'Existe ranking entre os alunos?',
     answer:
-      'A imagem é usada para gerar as suas perguntas e nada mais. Não existe feed público, não existe compartilhamento automático e nenhum professor recebe o seu material. A câmera só liga na tela de escanear, e você pode revogar a permissão quando quiser.',
+      'Não. Um placar que ordena adolescentes por desempenho expõe publicamente quem vai mal, e isso contraria o motivo do produto existir. O único dado coletivo é a meta da turma: quantos conceitos ela consolidou na semana, sem expor ninguém individualmente.',
   },
   {
     question: 'A IA não me entrega a resposta pronta?',

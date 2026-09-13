@@ -11,14 +11,14 @@ export const FinalCta = () => (
     <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center gap-8 text-center">
       <Reveal className="flex flex-col items-center gap-5">
         <p className="text-xs font-bold tracking-[0.16em] text-primary uppercase">
-          Comece pelo caderno de hoje
+          Comece pela sua primeira sessão
         </p>
         <h2 className="text-4xl leading-[1.04] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">
           Da matéria estudada uma vez para a matéria que fica.
         </h2>
         <p className="max-w-xl text-lg leading-relaxed text-white/70 text-pretty">
           Escaneie o código com a câmera do celular. O Memfeed abre pelo Expo Go, sem loja e sem
-          cadastro, e a primeira sessão começa com a página que você acabou de estudar.
+          cadastro — e a primeira sessão já começa com o assunto que você escolher.
         </p>
       </Reveal>
 

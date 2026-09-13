@@ -25,9 +25,16 @@ export const SiteHeader = () => (
         </ul>
       </nav>
 
-      <LinkButton href="#abrir" size="medium" className="shrink-0">
-        Testar agora
-      </LinkButton>
+      <div className="flex shrink-0 items-center gap-2">
+        <div className="hidden sm:block">
+          <LinkButton href="/painel" size="medium" variant="neutral">
+            Acessar como professor
+          </LinkButton>
+        </div>
+        <LinkButton href="#abrir" size="medium">
+          Testar agora
+        </LinkButton>
+      </div>
     </div>
   </header>
 );

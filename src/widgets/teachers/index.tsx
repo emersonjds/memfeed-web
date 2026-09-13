@@ -1,5 +1,6 @@
 import { Eyebrow, Section, SectionLead, SectionTitle } from '@/shared/ui/section';
 import { Reveal } from '@/shared/ui/reveal';
+import { LinkButton } from '@/shared/ui/button';
 
 const guarantees = [
   {
@@ -7,8 +8,8 @@ const guarantees = [
     body: 'O painel mostra qual conceito a turma está perdendo. Nome de aluno e desempenho individual não existem nessa tela — é agregado por decisão de projeto, não por configuração.',
   },
   {
-    title: 'O caderno continua sendo do aluno',
-    body: 'A foto vira pergunta e fica com quem tirou. Nada do material de estudo aparece para o professor nem para outro aluno.',
+    title: 'O que o aluno escolhe é só dele',
+    body: 'Quando o aluno digita o próprio assunto para revisar sozinho, isso não aparece para o professor. Só o que o professor publica é visto pela turma.',
   },
   {
     title: 'Serve para replanejar a aula',
@@ -23,9 +24,12 @@ export const Teachers = () => (
         <Eyebrow tone="accent">Para professores</Eyebrow>
         <SectionTitle>Você vê onde a turma está escorregando. Só isso.</SectionTitle>
         <SectionLead>
-          O painel do professor entra na fase 2, e ele nasce com um limite escrito no código: o dado
-          é sempre da turma inteira.
+          O painel do professor já existe, e nasce com um limite escrito no código: o dado é
+          sempre da turma inteira.
         </SectionLead>
+        <LinkButton href="/painel" variant="neutral" size="medium" className="self-start">
+          Acessar como professor
+        </LinkButton>
       </Reveal>
 
       <ul className="flex flex-col gap-4">
