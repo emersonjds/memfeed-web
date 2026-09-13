@@ -6,3 +6,7 @@ const decimalFormatter = new Intl.NumberFormat('pt-BR', {
 
 export const formatNumber = (value: number, decimals: 0 | 1 = 0): string =>
   decimals === 1 ? decimalFormatter.format(value) : integerFormatter.format(value);
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short' });
+
+export const formatDate = (iso: string): string => dateFormatter.format(new Date(iso));

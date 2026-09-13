@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      apexcharts:
+        specifier: ^7.2.0
+        version: 7.2.0
       motion:
         specifier: ^13.2.0
         version: 13.2.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -20,9 +23,15 @@ importers:
       react:
         specifier: 19.2.8
         version: 19.2.8
+      react-apexcharts:
+        specifier: ^2.1.1
+        version: 2.1.1(apexcharts@7.2.0)(react@19.2.8)
       react-dom:
         specifier: 19.2.8
         version: 19.2.8(react@19.2.8)
+      tailwind-merge:
+        specifier: ^3.6.0
+        version: 3.6.0
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -1075,6 +1084,13 @@ packages:
   ansi-styles@5.2.0:
     resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
     engines: {node: '>=10'}
+
+  apex-commons@0.7.0:
+    resolution: {integrity: sha512-cGspw4G0FV/hULrJy75Du301lFGSkMWph4c5B+/YX4CBImG8WFWRUZ5dTFKYcoK5Q8/Ax2jHAKWVVRzNZOWH7g==}
+
+  apexcharts@7.2.0:
+    resolution: {integrity: sha512-5tKy/nbgmo/COju4XqMUr5XldZGGfJlUpdbxHvzUo9/Utkt4XyZV466up++xxkLJNqa12u97BvGudfbTpoSJCQ==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -2357,6 +2373,12 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  react-apexcharts@2.1.1:
+    resolution: {integrity: sha512-aV25n+1ZdAzRG0KhODVC48K8WbhMKBAr3yWSeaaBqM1ySn22kSSKblsNCUvlwegsT+cdMLuOrK9xGZb+IK+OkQ==}
+    peerDependencies:
+      apexcharts: '>=5.10.1'
+      react: '>=16.8.0'
+
   react-dom@19.2.8:
     resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
     peerDependencies:
@@ -2581,6 +2603,9 @@ packages:
 
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
+
+  tailwind-merge@3.6.0:
+    resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
 
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
@@ -3701,6 +3726,12 @@ snapshots:
       color-convert: 2.0.1
 
   ansi-styles@5.2.0: {}
+
+  apex-commons@0.7.0: {}
+
+  apexcharts@7.2.0:
+    dependencies:
+      apex-commons: 0.7.0
 
   argparse@2.0.1: {}
 
@@ -5058,6 +5089,12 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  react-apexcharts@2.1.1(apexcharts@7.2.0)(react@19.2.8):
+    dependencies:
+      apexcharts: 7.2.0
+      prop-types: 15.8.1
+      react: 19.2.8
+
   react-dom@19.2.8(react@19.2.8):
     dependencies:
       react: 19.2.8
@@ -5359,6 +5396,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   symbol-tree@3.2.4: {}
+
+  tailwind-merge@3.6.0: {}
 
   tailwindcss@4.3.3: {}
 
