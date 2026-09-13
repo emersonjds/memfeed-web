@@ -51,10 +51,11 @@ describe('Hero', () => {
 });
 
 describe('ProofStrip', () => {
-  it('duplica a lista para o efeito contínuo, escondendo a cópia do leitor de tela', () => {
-    const { container } = render(<ProofStrip />);
-    expect(container.querySelectorAll('ul[aria-hidden="true"]')).toHaveLength(1);
-    expect(screen.getAllByText('Algoritmo FSRS-5')).toHaveLength(2);
+  it('identifica o piloto e a escola sem inventar adesão em escala', () => {
+    render(<ProofStrip />);
+    expect(screen.getByText('Piloto em andamento')).toBeInTheDocument();
+    expect(screen.getByText('Colégio Estadual Paulo Freire')).toBeInTheDocument();
+    expect(screen.getByText('34 alunos')).toBeInTheDocument();
   });
 });
 
