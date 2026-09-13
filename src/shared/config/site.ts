@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     'O professor publica a aula, ou você escolhe o assunto. O Memfeed transforma em perguntas de 15 segundos e devolve cada uma no dia em que sua memória ia falhar.',
   url: 'https://memfeed.app',
-  expoGoUrl: process.env.NEXT_PUBLIC_EXPO_GO_URL ?? 'exp://u.expo.dev/memfeed',
+  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? 'https://memfeed-app.netlify.app',
 } as const;
 
 export const navigationLinks = [

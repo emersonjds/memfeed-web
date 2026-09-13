@@ -17,8 +17,8 @@ export const FinalCta = () => (
           Da matéria estudada uma vez para a matéria que fica.
         </h2>
         <p className="max-w-xl text-lg leading-relaxed text-white/70 text-pretty">
-          Escaneie o código com a câmera do celular. O Memfeed abre pelo Expo Go, sem loja e sem
-          cadastro — e a primeira sessão já começa com o assunto que você escolher.
+          Escaneie o código com a câmera do celular, ou abra o link direto. O Memfeed roda no
+          navegador — e a primeira sessão já começa com o assunto que você escolher.
         </p>
       </Reveal>
 
