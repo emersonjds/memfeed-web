@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
-  icons: { icon: '/desfeed-icon.png', apple: '/desfeed-icon.png' },
+  icons: { icon: '/memfeed-mark.svg', apple: '/memfeed-icon.png' },
 };
 
 export const viewport: Viewport = {
