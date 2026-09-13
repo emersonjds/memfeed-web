@@ -58,7 +58,10 @@ export const HeroPhones = () => {
           {...entrance}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <PhoneFrame src="/app/perfil.png" alt="Tela de perfil do Memfeed com o índice de retenção do aluno" />
+          <PhoneFrame
+            src="/app/evolucao.png"
+            alt="Tela de evolução do Memfeed com a retenção em sete dias e o histórico da semana"
+          />
         </motion.div>
       </div>
     </div>

@@ -36,8 +36,8 @@ export const Features = () => (
           </div>
           <div className="relative mx-auto aspect-[9/12] w-[190px] shrink-0 overflow-hidden rounded-2xl ring-1 ring-border-soft sm:w-[210px]">
             <Image
-              src="/app/perfil.png"
-              alt="Tela de perfil do Memfeed mostrando a retenção do aluno e a sequência de dias de estudo"
+              src="/app/evolucao.png"
+              alt="Tela de evolução do Memfeed mostrando a retenção do aluno e a sequência de dias de estudo"
               fill
               sizes="210px"
               className="object-cover object-top"
