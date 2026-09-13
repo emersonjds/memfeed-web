@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/shared/lib/cn';
 import { Logo } from '@/shared/ui/logo';
-import { BookIcon, ChartIcon, HomeIcon, PlusCircleIcon } from '@/shared/ui/icons';
+import { BookIcon, ChartIcon, ExitIcon, HomeIcon, PlusCircleIcon } from '@/shared/ui/icons';
 
 const navItems = [
   { name: 'Turma', href: '/painel', icon: HomeIcon },
@@ -70,6 +70,14 @@ export const PainelSidebar = ({ isOpen, onClose }: PainelSidebarProps) => {
             })}
           </ul>
         </nav>
+        <Link
+          href="/"
+          onClick={onClose}
+          className="mt-auto flex min-h-11 items-center gap-3 rounded-xl px-3 text-[15px] font-semibold text-ink-muted transition-colors hover:bg-surface-soft hover:text-ink"
+        >
+          <ExitIcon className="size-5 shrink-0" />
+          Sair
+        </Link>
       </aside>
     </>
   );
