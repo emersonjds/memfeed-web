@@ -15,6 +15,11 @@ professor publica a aula que acabou de dar e descobre o que a turma esqueceu uma
 ![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Arquitetura](https://img.shields.io/badge/arquitetura-Feature--Sliced_Design-4F46E5?style=flat-square)
 
+[![Site no ar](https://img.shields.io/badge/site-memfeed--web.netlify.app-10B981?style=flat-square&logo=netlify&logoColor=white)](https://memfeed-web.netlify.app)
+[![App do aluno](https://img.shields.io/badge/app_do_aluno-memfeed--app-4F46E5?style=flat-square&logo=expo&logoColor=white)](https://github.com/emersonjds/memfeed-app)
+
+**[Ver no ar](https://memfeed-web.netlify.app)** · **[App do aluno (mobile)](https://github.com/emersonjds/memfeed-app)** · **[API](https://github.com/emersonjds/memfeed-api)**
+
 </div>
 
 ---
@@ -23,7 +28,7 @@ professor publica a aula que acabou de dar e descobre o que a turma esqueceu uma
 
 | Rota | O que é | Renderização |
 | --- | --- | --- |
-| `/` | Landing pública. O caminho inteiro é o QR code do Expo Go — sem loja, sem cadastro. | Estática no build |
+| `/` | Landing pública. O QR abre o [app do aluno](https://memfeed-app.netlify.app) direto no navegador — sem loja, sem cadastro. | Estática no build |
 | `/painel` | Turma: as quatro métricas, a curva de retenção e os conceitos que mais caíram. | Sob demanda |
 | `/painel/analises` | Abas **Turma** e **Alunos**. O detalhamento pesado mora aqui. | Sob demanda |
 | `/painel/aulas` | Aulas publicadas, com turma, colégio e horário. Cada linha abre o detalhe. | Sob demanda |
@@ -52,18 +57,22 @@ aluno trava e que só ele enxerga.
 **Nome aparece só para participação.** Quem ainda não respondeu é fato operacional. Quem errou
 o quê, não.
 
-## Rodando
+## Rodando local
+
+Pré-requisitos: Node 22+ e pnpm.
 
 ```bash
 pnpm install
 cp .env.example .env.local
-pnpm dev
+pnpm dev            # http://localhost:3000 (ou a próxima porta livre, se a API já ocupou a 3000)
 ```
 
+`.env.local`:
+
 ```bash
-NEXT_PUBLIC_API_URL=http://localhost:3333           # memfeed-api
+NEXT_PUBLIC_API_URL=http://localhost:3000            # memfeed-api local (ou a URL do Railway)
 NEXT_PUBLIC_TEACHER_ID=22222222-2222-4222-8222-222222222222
-NEXT_PUBLIC_EXPO_GO_URL=exp://...                   # o túnel do Expo, para o QR da landing
+NEXT_PUBLIC_APP_URL=https://memfeed-app.netlify.app  # para onde o QR da landing aponta
 ```
 
 O painel consome a [`memfeed-api`](https://github.com/emersonjds/memfeed-api) por HTTP. **Se a
