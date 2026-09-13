@@ -46,7 +46,7 @@ describe('Hero', () => {
 
   it('mostra as capturas reais do app com texto alternativo', () => {
     render(<Hero />);
-    expect(screen.getByAltText(/Feed do Desfeed/)).toBeInTheDocument();
+    expect(screen.getByAltText(/Feed do Memfeed/)).toBeInTheDocument();
   });
 });
 

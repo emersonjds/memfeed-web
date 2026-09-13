@@ -38,7 +38,7 @@ export const QrCodePanel = async ({ size = 'medium', className }: QrCodePanelPro
             Aponte a câmera do celular
           </p>
           <p className="max-w-xs text-sm leading-relaxed text-ink-muted">
-            O Desfeed abre no seu aparelho pelo Expo Go. Sem loja, sem cadastro, sem instalar nada
+            O Memfeed abre no seu aparelho pelo Expo Go. Sem loja, sem cadastro, sem instalar nada
             antes de ver funcionando.
           </p>
           <LinkButton

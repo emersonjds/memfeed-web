@@ -27,7 +27,7 @@ export const ForgettingCurve = () => {
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
         className="h-auto w-full"
         role="img"
-        aria-label="Gráfico comparando a retenção da memória ao longo de 30 dias: sem revisar, a lembrança cai para perto de 20 por cento já na primeira semana; com as revisões espaçadas do Desfeed, ela se mantém acima de 90 por cento."
+        aria-label="Gráfico comparando a retenção da memória ao longo de 30 dias: sem revisar, a lembrança cai para perto de 20 por cento já na primeira semana; com as revisões espaçadas do Memfeed, ela se mantém acima de 90 por cento."
       >
         <defs>
           <linearGradient id="curve-fill" x1="0" y1="0" x2="0" y2="1">
@@ -105,7 +105,7 @@ export const ForgettingCurve = () => {
       <figcaption className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold">
         <span className="flex items-center gap-2">
           <span aria-hidden="true" className="h-1 w-6 rounded-full bg-primary" />
-          Revisando no Desfeed
+          Revisando no Memfeed
         </span>
         <span className="flex items-center gap-2 text-ink-muted">
           <span

@@ -40,7 +40,7 @@ export const Hero = () => (
         </h1>
 
         <p className="max-w-xl text-lg leading-relaxed text-ink-muted text-pretty sm:text-xl">
-          Fotografe a página do caderno. O Desfeed transforma o que você escreveu em perguntas de
+          Fotografe a página do caderno. O Memfeed transforma o que você escreveu em perguntas de
           quinze segundos e devolve cada uma no dia em que a sua memória ia falhar. Sem scroll
           infinito: a sessão acaba de propósito.
         </p>

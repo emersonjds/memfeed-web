@@ -36,7 +36,7 @@ export const HeroPhones = () => {
           {...entrance}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <PhoneFrame src="/app/cadernos.png" alt="Tela de cadernos do Desfeed, com a retenção de cada matéria" />
+          <PhoneFrame src="/app/cadernos.png" alt="Tela de cadernos do Memfeed, com a retenção de cada matéria" />
         </motion.div>
 
         <motion.div
@@ -47,7 +47,7 @@ export const HeroPhones = () => {
         >
           <PhoneFrame
             src="/app/feed.png"
-            alt="Feed do Desfeed mostrando uma pergunta de termodinâmica com quatro alternativas"
+            alt="Feed do Memfeed mostrando uma pergunta de termodinâmica com quatro alternativas"
             priority
           />
         </motion.div>
@@ -58,7 +58,7 @@ export const HeroPhones = () => {
           {...entrance}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <PhoneFrame src="/app/perfil.png" alt="Tela de perfil do Desfeed com o índice de retenção do aluno" />
+          <PhoneFrame src="/app/perfil.png" alt="Tela de perfil do Memfeed com o índice de retenção do aluno" />
         </motion.div>
       </div>
     </div>

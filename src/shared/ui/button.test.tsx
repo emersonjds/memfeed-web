@@ -38,9 +38,9 @@ describe('Button', () => {
 
 describe('LinkButton', () => {
   it('renderiza um link navegável', () => {
-    render(<LinkButton href="#abrir">Abrir o Desfeed</LinkButton>);
+    render(<LinkButton href="#abrir">Abrir o Memfeed</LinkButton>);
 
-    const link = screen.getByRole('link', { name: 'Abrir o Desfeed' });
+    const link = screen.getByRole('link', { name: 'Abrir o Memfeed' });
     expect(link).toHaveAttribute('href', '#abrir');
   });
 
