@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# desfeed-web
 
-## Getting Started
+Site público do [Desfeed](../desfeed-app) — o aplicativo que transforma a página que você estudou
+em perguntas curtas e devolve cada uma no dia em que a sua memória ia falhar.
 
-First, run the development server:
+A página inteira existe para um objetivo: levar o visitante do primeiro scroll até o app aberto no
+celular dele, por QR code, sem passar por loja nem por cadastro.
+
+## Rodando
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local   # aponte NEXT_PUBLIC_EXPO_GO_URL para o seu túnel do Expo
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Verificação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm typecheck
+pnpm lint
+pnpm test:coverage   # limiar de 90% nas quatro métricas
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Stack
 
-## Learn More
+Next.js 16 (App Router, saída estática), React 19, TypeScript estrito, Tailwind v4, Motion,
+Vitest e Testing Library. As capturas de tela em `public/app/` vêm de `desfeed-app`.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Convenções de código, design system e fluxo de branch estão em [`CLAUDE.md`](./CLAUDE.md).
