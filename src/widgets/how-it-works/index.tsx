@@ -7,8 +7,8 @@ const steps = [
     number: '01',
     title: 'O professor publica, ou você escolhe o assunto',
     body: 'Prof. Marcos termina a aula e publica o tema para a turma. Ou você mesmo digita o que precisa revisar antes da prova. As duas origens entram na mesma fila de revisão.',
-    screenshot: '/app/perfil.png',
-    alt: 'Tela de perfil do Memfeed com o índice de retenção do aluno',
+    screenshot: '/app/evolucao.png',
+    alt: 'Tela de evolução do Memfeed com a retenção em sete dias e o histórico da semana',
   },
   {
     number: '02',
