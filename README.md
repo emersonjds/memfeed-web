@@ -14,6 +14,7 @@ professor publica a aula que acabou de dar e descobre o que a turma esqueceu uma
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Arquitetura](https://img.shields.io/badge/arquitetura-Feature--Sliced_Design-4F46E5?style=flat-square)
+![Gemini](https://img.shields.io/badge/IA-Google_Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)
 
 [![Site no ar](https://img.shields.io/badge/site-memfeed--web.netlify.app-10B981?style=flat-square&logo=netlify&logoColor=white)](https://memfeed-web.netlify.app)
 [![App do aluno](https://img.shields.io/badge/app_do_aluno-memfeed--app-4F46E5?style=flat-square&logo=expo&logoColor=white)](https://github.com/emersonjds/memfeed-app)
@@ -33,7 +34,7 @@ professor publica a aula que acabou de dar e descobre o que a turma esqueceu uma
 | `/painel/analises` | Abas **Turma** e **Alunos**. O detalhamento pesado mora aqui. | Sob demanda |
 | `/painel/aulas` | Aulas publicadas, com turma, colégio e horário. Cada linha abre o detalhe. | Sob demanda |
 | `/painel/aulas/[id]` | Conceitos da aula, onde a turma está em cada um, e quem ainda não respondeu. | Sob demanda |
-| `/painel/aulas/nova` | Matéria, turma, assunto e quantas questões. A IA gera, o professor revisa uma vez e publica. | Sob demanda |
+| `/painel/aulas/nova` | Matéria, turma, assunto e quantas questões. O **Gemini** gera as questões, o professor revisa uma vez e publica. | Sob demanda |
 
 ## O que o painel mostra que ninguém mais mostra
 
@@ -74,6 +75,9 @@ NEXT_PUBLIC_API_URL=http://localhost:3000            # memfeed-api local (ou a U
 NEXT_PUBLIC_TEACHER_ID=22222222-2222-4222-8222-222222222222
 NEXT_PUBLIC_APP_URL=https://memfeed-app.netlify.app  # para onde o QR da landing aponta
 ```
+
+As questões do painel são geradas por LLM de verdade — **Google Gemini**, integrado na
+[`memfeed-api`](https://github.com/emersonjds/memfeed-api) com contrato validado por JSON schema.
 
 O painel consome a [`memfeed-api`](https://github.com/emersonjds/memfeed-api) por HTTP. **Se a
 API não responder, a tela cai no relatório de demonstração em vez de quebrar** — uma falha de
