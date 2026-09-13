@@ -7,6 +7,7 @@ const daysAgo = (days: number): string =>
 // o contrato de /api/teacher/class é o mesmo dos dois lados.
 export const mockClassReport: ClassReport = {
   className: '2º ano B',
+  school: 'Colégio Estadual Paulo Freire',
   subject: 'Biologia',
   studentCount: 34,
   participation: 91,
@@ -17,6 +18,9 @@ export const mockClassReport: ClassReport = {
       id: 'aula-respiracao',
       topic: 'Respiração celular e mitocôndria',
       publishedAt: daysAgo(8),
+      className: '2º ano B',
+      school: 'Colégio Estadual Paulo Freire',
+      studentCount: 34,
       answeredBy: 31,
       concepts: [
         { concept: 'Fosforilação oxidativa', accuracyOnDay: 88, retentionD7: 79 },
@@ -28,6 +32,9 @@ export const mockClassReport: ClassReport = {
       id: 'aula-fotossintese',
       topic: 'Fotossíntese — fase clara e escura',
       publishedAt: daysAgo(15),
+      className: '2º ano B',
+      school: 'Colégio Estadual Paulo Freire',
+      studentCount: 34,
       answeredBy: 29,
       concepts: [
         { concept: 'Fase fotoquímica', accuracyOnDay: 76, retentionD7: 61 },

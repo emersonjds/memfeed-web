@@ -4,9 +4,10 @@ import { LinkButton } from '@/shared/ui/button';
 import { TurmaMetrics } from '@/widgets/turma-metrics';
 import { RetencaoChart } from '@/widgets/retencao-chart';
 import { ConceitosEsquecidos } from '@/widgets/conceitos-esquecidos';
-import { AulasPublicadas } from '@/widgets/aulas-publicadas';
 
 export const dynamic = 'force-dynamic';
+
+const TOP_CONCEITOS_LIMIT = 3;
 
 const PainelPage = async () => {
   const report = await getClassReport();
@@ -16,7 +17,10 @@ const PainelPage = async () => {
     <div className="flex flex-col gap-4 md:gap-6">
       <div>
         <h1 className="text-xl font-extrabold text-ink sm:text-2xl">{report.className}</h1>
-        <p className="text-sm text-ink-muted">{report.subject}</p>
+        <p className="text-sm text-ink-muted">
+          {report.subject}
+          {` · ${report.school}`}
+        </p>
       </div>
 
       <TurmaMetrics
@@ -33,8 +37,10 @@ const PainelPage = async () => {
             d7={report.retentionD7}
             d30={report.retentionD30}
           />
-          <ConceitosEsquecidos lessons={report.lessons} />
-          <AulasPublicadas lessons={report.lessons} />
+          <ConceitosEsquecidos lessons={report.lessons} limit={TOP_CONCEITOS_LIMIT} />
+          <LinkButton href="/painel/analises" variant="neutral" className="self-start">
+            Ver todas as análises
+          </LinkButton>
         </>
       ) : (
         <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-border-hard bg-surface px-6 py-12 text-center">
