@@ -16,7 +16,7 @@ export const SiteHeader = () => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-ink-muted transition-colors hover:bg-surface-soft hover:text-ink"
+                className="inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold whitespace-nowrap text-ink-muted transition-colors hover:bg-surface-soft hover:text-ink"
               >
                 {link.label}
               </a>
@@ -28,7 +28,7 @@ export const SiteHeader = () => (
       <div className="flex shrink-0 items-center gap-2">
         <div className="hidden sm:block">
           <LinkButton href="/painel" size="medium" variant="neutral">
-            Acessar como professor
+            Professor
           </LinkButton>
         </div>
         <LinkButton
@@ -38,7 +38,7 @@ export const SiteHeader = () => (
           rel="noopener noreferrer"
           prefetch={false}
         >
-          Entrar como aluno
+          Aluno
         </LinkButton>
       </div>
     </div>
