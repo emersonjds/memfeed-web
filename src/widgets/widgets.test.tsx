@@ -22,7 +22,7 @@ const { Teachers } = await import('./teachers');
 describe('SiteHeader', () => {
   it('manda o aluno para o app publicado, em nova aba', () => {
     render(<SiteHeader />);
-    const entrar = screen.getByRole('link', { name: 'Entrar como aluno' });
+    const entrar = screen.getByRole('link', { name: 'Aluno' });
     expect(entrar).toHaveAttribute('href', siteConfig.appUrl);
     expect(entrar).toHaveAttribute('target', '_blank');
     expect(entrar).toHaveAttribute('rel', expect.stringContaining('noopener'));
@@ -30,7 +30,7 @@ describe('SiteHeader', () => {
 
   it('leva o professor ao painel', () => {
     render(<SiteHeader />);
-    expect(screen.getByRole('link', { name: 'Acessar como professor' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Professor' })).toHaveAttribute(
       'href',
       '/painel',
     );
