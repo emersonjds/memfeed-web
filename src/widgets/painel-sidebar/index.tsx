@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/shared/lib/cn';
 import { Logo } from '@/shared/ui/logo';
-import { BookIcon, HomeIcon, PlusCircleIcon } from '@/shared/ui/icons';
+import { BookIcon, ChartIcon, HomeIcon, PlusCircleIcon } from '@/shared/ui/icons';
 
 const navItems = [
   { name: 'Turma', href: '/painel', icon: HomeIcon },
+  { name: 'Análises', href: '/painel/analises', icon: ChartIcon },
   { name: 'Nova aula', href: '/painel/aulas/nova', icon: PlusCircleIcon },
   { name: 'Aulas publicadas', href: '/painel/aulas', icon: BookIcon },
 ] as const;
@@ -17,8 +18,15 @@ type PainelSidebarProps = {
   readonly onClose: () => void;
 };
 
+const findActiveHref = (pathname: string): string =>
+  navItems
+    .map((item) => item.href)
+    .filter((href) => pathname === href || pathname.startsWith(`${href}/`))
+    .sort((a, b) => b.length - a.length)[0] ?? '';
+
 export const PainelSidebar = ({ isOpen, onClose }: PainelSidebarProps) => {
   const pathname = usePathname();
+  const activeHref = findActiveHref(pathname);
 
   return (
     <>
@@ -40,7 +48,7 @@ export const PainelSidebar = ({ isOpen, onClose }: PainelSidebarProps) => {
         <nav aria-label="Navegação do painel">
           <ul className="flex flex-col gap-1">
             {navItems.map(({ name, href, icon: Icon }) => {
-              const active = pathname === href;
+              const active = href === activeHref;
               return (
                 <li key={href}>
                   <Link

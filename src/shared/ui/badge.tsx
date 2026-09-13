@@ -1,13 +1,14 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/shared/lib/cn';
 
-type BadgeTone = 'primary' | 'accent' | 'neutral' | 'warn';
+type BadgeTone = 'primary' | 'accent' | 'neutral' | 'warn' | 'danger';
 
 const toneClasses: Record<BadgeTone, string> = {
   primary: 'bg-primary-soft text-primary-deep',
   accent: 'bg-accent-soft text-accent',
   neutral: 'bg-surface-soft text-ink-muted ring-1 ring-border-soft',
   warn: 'bg-amber-50 text-amber-700',
+  danger: 'bg-red-50 text-danger',
 };
 
 type BadgeProps = {
