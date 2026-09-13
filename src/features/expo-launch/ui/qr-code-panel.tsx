@@ -14,7 +14,7 @@ const sizeClasses = {
 } as const;
 
 export const QrCodePanel = async ({ size = 'medium', className }: QrCodePanelProps) => {
-  const qrCodeSvg = await renderQrCodeSvg(siteConfig.expoGoUrl);
+  const qrCodeSvg = await renderQrCodeSvg(siteConfig.appUrl);
 
   return (
     <div
@@ -35,14 +35,14 @@ export const QrCodePanel = async ({ size = 'medium', className }: QrCodePanelPro
 
         <div className="flex flex-col items-center gap-3 text-center sm:items-start sm:text-left">
           <p className="text-lg font-extrabold tracking-tight text-balance sm:text-xl">
-            Aponte a câmera do celular
+            Abra no seu celular
           </p>
           <p className="max-w-xs text-sm leading-relaxed text-ink-muted">
-            O Memfeed abre no seu aparelho pelo Expo Go. Sem loja, sem cadastro, sem instalar nada
-            antes de ver funcionando.
+            O Memfeed roda direto no navegador. Sem loja, sem cadastro, sem instalar nada antes de
+            ver funcionando.
           </p>
           <LinkButton
-            href={siteConfig.expoGoUrl}
+            href={siteConfig.appUrl}
             size="medium"
             className="w-full sm:hidden"
             prefetch={false}

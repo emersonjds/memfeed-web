@@ -6,8 +6,8 @@ describe('QrCodePanel', () => {
   it('mostra a instrução de uso do código junto do QR', async () => {
     render(await QrCodePanel({}));
 
-    expect(screen.getByText('Aponte a câmera do celular')).toBeInTheDocument();
-    expect(screen.getByText(/Expo Go/)).toBeInTheDocument();
+    expect(screen.getByText('Abra no seu celular')).toBeInTheDocument();
+    expect(screen.getByText(/roda direto no navegador/)).toBeInTheDocument();
   });
 
   it('desenha o QR como SVG decorativo, com o texto carregando a instrução', async () => {
@@ -22,7 +22,7 @@ describe('QrCodePanel', () => {
     render(await QrCodePanel({}));
 
     const link = screen.getByRole('link', { name: /abrir agora/i });
-    expect(link.getAttribute('href')).toMatch(/^exp:\/\//);
+    expect(link.getAttribute('href')).toMatch(/^https:\/\/memfeed-app\.netlify\.app/);
   });
 
   it('usa o tamanho médio por padrão', async () => {
