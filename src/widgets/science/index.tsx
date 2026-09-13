@@ -25,7 +25,7 @@ export const Science = () => (
         <SectionTitle>Você não esquece por falta de esforço. Esquece por falta de hora certa.</SectionTitle>
         <SectionLead>
           Uma semana depois da aula, boa parte do que você estudou já saiu. Não é preguiça, é como a
-          memória funciona. O Desfeed não pede mais horas de estudo — pede os quinze segundos certos,
+          memória funciona. O Memfeed não pede mais horas de estudo — pede os quinze segundos certos,
           no dia certo.
         </SectionLead>
 

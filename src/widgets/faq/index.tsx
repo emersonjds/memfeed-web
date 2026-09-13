@@ -5,7 +5,7 @@ const questions = [
   {
     question: 'Preciso instalar alguma coisa para testar?',
     answer:
-      'Não. O código na tela abre o Desfeed dentro do Expo Go, o aplicativo gratuito que a Expo publica nas duas lojas. Se você já tiver o Expo Go, a leitura do código é o único passo.',
+      'Não. O código na tela abre o Memfeed dentro do Expo Go, o aplicativo gratuito que a Expo publica nas duas lojas. Se você já tiver o Expo Go, a leitura do código é o único passo.',
   },
   {
     question: 'A foto do meu caderno vai para algum lugar?',
@@ -25,7 +25,7 @@ const questions = [
   {
     question: 'Serve para concurso e para vestibular?',
     answer:
-      'Serve para qualquer conteúdo que você já tenha estudado e precise segurar por meses. O Desfeed não fornece o material: ele trabalha em cima do que você escreveu, leu ou resumiu.',
+      'Serve para qualquer conteúdo que você já tenha estudado e precise segurar por meses. O Memfeed não fornece o material: ele trabalha em cima do que você escreveu, leu ou resumiu.',
   },
   {
     question: 'Por que a sessão termina em vez de continuar?',

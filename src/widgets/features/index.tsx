@@ -37,7 +37,7 @@ export const Features = () => (
           <div className="relative mx-auto aspect-[9/12] w-[190px] shrink-0 overflow-hidden rounded-2xl ring-1 ring-border-soft sm:w-[210px]">
             <Image
               src="/app/ranking.png"
-              alt="Tela de ranking semanal do Desfeed com a classificação dos alunos"
+              alt="Tela de ranking semanal do Memfeed com a classificação dos alunos"
               fill
               sizes="210px"
               className="object-cover object-top"
@@ -55,7 +55,7 @@ export const Features = () => (
             Sem scroll infinito. Sem “mais um card”.
           </h3>
           <p className="text-base leading-relaxed text-white/70 text-pretty">
-            Você define a meta do dia. Quando ela termina, o Desfeed diz que acabou e fecha a
+            Você define a meta do dia. Quando ela termina, o Memfeed diz que acabou e fecha a
             sessão. Um único lembrete por dia, no horário que você escolher.
           </p>
         </article>

@@ -17,7 +17,7 @@ describe('ForgettingCurve', () => {
 
   it('rotula as duas séries e marca a curva como ilustrativa', () => {
     render(<ForgettingCurve />);
-    expect(screen.getByText('Revisando no Desfeed')).toBeInTheDocument();
+    expect(screen.getByText('Revisando no Memfeed')).toBeInTheDocument();
     expect(screen.getByText('Estudando uma vez só')).toBeInTheDocument();
     expect(screen.getByText(/ilustrativa/i)).toBeInTheDocument();
   });

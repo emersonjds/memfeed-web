@@ -4,8 +4,8 @@ import { PhoneFrame } from './phone-frame';
 
 describe('PhoneFrame', () => {
   it('descreve a captura de tela para leitor de tela', () => {
-    render(<PhoneFrame src="/app/feed.png" alt="Feed do Desfeed" />);
-    expect(screen.getByAltText('Feed do Desfeed')).toHaveAttribute('src', '/app/feed.png');
+    render(<PhoneFrame src="/app/feed.png" alt="Feed do Memfeed" />);
+    expect(screen.getByAltText('Feed do Memfeed')).toHaveAttribute('src', '/app/feed.png');
   });
 
   it('aceita classe de largura', () => {

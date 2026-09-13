@@ -5,7 +5,7 @@ import { Logo } from './logo';
 describe('Logo', () => {
   it('mostra o nome do produto como texto legível', () => {
     render(<Logo />);
-    expect(screen.getByText('Desfeed')).toBeInTheDocument();
+    expect(screen.getByText('Memfeed')).toBeInTheDocument();
   });
 
   it('aceita classe adicional', () => {

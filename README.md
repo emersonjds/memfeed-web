@@ -1,6 +1,6 @@
-# desfeed-web
+# memfeed-web
 
-Site público do [Desfeed](../desfeed-app) — o aplicativo que transforma a página que você estudou
+Site público do [Memfeed](../memfeed-app) — o aplicativo que transforma a página que você estudou
 em perguntas curtas e devolve cada uma no dia em que a sua memória ia falhar.
 
 A página inteira existe para um objetivo: levar o visitante do primeiro scroll até o app aberto no
@@ -26,6 +26,6 @@ pnpm build
 ## Stack
 
 Next.js 16 (App Router, saída estática), React 19, TypeScript estrito, Tailwind v4, Motion,
-Vitest e Testing Library. As capturas de tela em `public/app/` vêm de `desfeed-app`.
+Vitest e Testing Library. As capturas de tela em `public/app/` vêm de `memfeed-app`.
 
 Convenções de código, design system e fluxo de branch estão em [`CLAUDE.md`](./CLAUDE.md).

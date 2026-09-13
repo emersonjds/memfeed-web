@@ -8,21 +8,21 @@ const steps = [
     title: 'Fotografe a página que você estudou',
     body: 'Aponte para o caderno, o slide ou o livro. A câmera só liga nessa tela e a imagem vira pergunta — nada é publicado, nada vai para um feed de outra pessoa.',
     screenshot: '/app/escanear.png',
-    alt: 'Tela de escanear do Desfeed, com a moldura da câmera e o botão de liberar a câmera',
+    alt: 'Tela de escanear do Memfeed, com a moldura da câmera e o botão de liberar a câmera',
   },
   {
     number: '02',
     title: 'A IA devolve perguntas, nunca a resposta pronta',
     body: 'Em segundos o conteúdo vira cards curtos sobre o que você mesmo escreveu. Quem precisa lembrar é você — esse é o ponto inteiro.',
     screenshot: '/app/feed.png',
-    alt: 'Card do feed do Desfeed com uma pergunta de termodinâmica e quatro alternativas',
+    alt: 'Card do feed do Memfeed com uma pergunta de termodinâmica e quatro alternativas',
   },
   {
     number: '03',
     title: 'Cada card volta no dia em que ia escapar',
     body: 'Você avalia o quanto lembrou e o FSRS calcula o próximo encontro. A meta do dia termina, o app agradece e sai da frente.',
     screenshot: '/app/cadernos.png',
-    alt: 'Tela de cadernos do Desfeed com a retenção de cada matéria e a próxima revisão',
+    alt: 'Tela de cadernos do Memfeed com a retenção de cada matéria e a próxima revisão',
   },
 ] as const;
 
