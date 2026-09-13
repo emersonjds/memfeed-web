@@ -31,8 +31,14 @@ export const SiteHeader = () => (
             Acessar como professor
           </LinkButton>
         </div>
-        <LinkButton href="#abrir" size="medium">
-          Testar agora
+        <LinkButton
+          href={siteConfig.appUrl}
+          size="medium"
+          target="_blank"
+          rel="noopener noreferrer"
+          prefetch={false}
+        >
+          Entrar como aluno
         </LinkButton>
       </div>
     </div>

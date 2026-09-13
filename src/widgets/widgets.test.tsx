@@ -1,6 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
+import { siteConfig } from '@/shared/config/site';
 
 vi.mock('@/features/expo-launch/ui/qr-code-panel', () => ({
   QrCodePanel: () => <div data-testid="qr-code-panel" />,
@@ -19,9 +20,20 @@ const { SiteHeader } = await import('./site-header');
 const { Teachers } = await import('./teachers');
 
 describe('SiteHeader', () => {
-  it('leva à âncora de teste do app', () => {
+  it('manda o aluno para o app publicado, em nova aba', () => {
     render(<SiteHeader />);
-    expect(screen.getByRole('link', { name: 'Testar agora' })).toHaveAttribute('href', '#abrir');
+    const entrar = screen.getByRole('link', { name: 'Entrar como aluno' });
+    expect(entrar).toHaveAttribute('href', siteConfig.appUrl);
+    expect(entrar).toHaveAttribute('target', '_blank');
+    expect(entrar).toHaveAttribute('rel', expect.stringContaining('noopener'));
+  });
+
+  it('leva o professor ao painel', () => {
+    render(<SiteHeader />);
+    expect(screen.getByRole('link', { name: 'Acessar como professor' })).toHaveAttribute(
+      'href',
+      '/painel',
+    );
   });
 
   it('lista as seções navegáveis', () => {
