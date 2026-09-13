@@ -5,7 +5,7 @@ const questions = [
   {
     question: 'Preciso instalar alguma coisa para testar?',
     answer:
-      'Não. O código na tela abre o Memfeed dentro do Expo Go, o aplicativo gratuito que a Expo publica nas duas lojas. Se você já tiver o Expo Go, a leitura do código é o único passo.',
+      'Não. O Memfeed roda direto no navegador do celular. Escaneie o código ou abra o link, e o app já carrega — sem loja, sem cadastro.',
   },
   {
     question: 'Existe ranking entre os alunos?',
