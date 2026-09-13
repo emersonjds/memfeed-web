@@ -1,0 +1,6 @@
+[build]
+  command = "pnpm typecheck && pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
